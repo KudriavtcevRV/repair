@@ -498,17 +498,160 @@ li {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal_active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.modal__dialog {
+  position: relative;
+  margin: auto;
+}
+
+.modal-dialog {
+  max-width: 570px;
+  width: 80%;
+  background-color: #ffffff;
+  padding: 80px 100px;
+}
+
+.modal-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  font-size: 50px;
+  background-color: #ffffff;
+  color: #ffd200;
+  cursor: pointer;
+}
+
+.modal-dialog__title {
+  margin-bottom: 52px;
+  font-size: 22px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  color: #333333;
+  line-height: 33px;
+  text-align: center;
+}
+
+.modal-dialog__subtitle {
+  color: #333333;
+  text-align: center;
+  font-family: 'Museo Sans Light', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 53px;
+}
+
+.modal__form {
+  margin-bottom: 33px;
+}
+
+.modal__input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.modal__input:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+.modal__button {
+  width: 100%;
+  min-height: 70px;
+  color: #333333;
+  font-size: 16px;
+}
+
+.modal__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.modal__text {
+  color: #333333;
+  font-family: 'Museo Sans Light', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  max-width: 270px;
+  margin: auto;
+  margin-bottom: 13px;
+}
+
+.modal__phone {
+  color: #333333;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    padding: 80px;
+  }
+  .modal-dialog__title {
+    max-width: 281px;
+    font-size: 18px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .modal-dialog__subtitle {
+    font-size: 14px;
+    margin-bottom: 27px;
+  }
+}
+
+@media (max-width: 567px) {
+  .modal-dialog {
+    padding: 80px 40px;
+  }
+  .modal-dialog__close {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-dialog {
+    padding: 50px 25px;
+    width: 90%;
+  }
+  .modal-dialog__title {
+    line-height: 1.3;
+  }
+  .modal-dialog__subtitle {
+    max-width: 200px;
+    margin: auto;
+    margin-bottom: 27px;
+  }
+  .modal-dialog__button {
+    font-size: 14px;
+  }
+  .modal__input {
+    margin-bottom: 10px;
+  }
+  .modal__input:nth-child(2) {
+    margin-bottom: 10px;
+  }
+  .modal__phone {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
