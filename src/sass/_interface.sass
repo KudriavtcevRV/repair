@@ -10,14 +10,37 @@ li
 .container
   width: 1170px
   margin: auto
+.button
+  border-radius: 10px
+  background-color: $main-color
+  border: none
+  padding: 18px 30px
+  +bold
+  &:hover
+    background-color: lighten($main-color, 10%)
+    cursor: pointer
+.section
+  padding: 100px 0
+  &-title
+    color: $text-color
+    +bold
+    font-size: 30px
+    line-height: 45px
+  &-subtitle
+    color: $text-color
+    +reg
+    font-size: 16px
+.input
+  border-radius: 10px
+  border: 1px solid $border-input
+  min-height: 65px
+  padding: 0 25px
+  font-size: 15px
+  +reg
+  border-radius: 10px
+  &:focus
+    border: 2px solid $main-color
 @media (max-width: 1200px)
   .container
     max-width: 760px
     width: 86%
-@media (max-width: 768px)
-  .button
-    border-radius: 10px
-    background-color: $main-color
-    border: none
-    padding: 18px 30px
-    +bold

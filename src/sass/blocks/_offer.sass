@@ -1,0 +1,111 @@
+.offer
+  position: relative
+  padding-top: 78px
+  padding-bottom: 92px
+  background: url('../img/offer/offer-bg.png') no-repeat center right
+  background-size: contain
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 50%
+    height: 100%
+    background-color: #ffffff
+  &-block
+    width: 50%
+    padding-right: 90px
+    position: relative
+  &__title
+    margin: 0
+    margin-bottom: 18px
+    font-size: 24px
+    +bold
+    line-height: 35px
+    max-width: 350px
+  &__subtitle
+    margin: 0
+    margin-bottom: 30px
+    max-width: 240px
+    +reg
+  &__input
+    margin-bottom: 30px
+    width: 240px
+    &:first-child
+      margin-right: 10px
+  &__button
+    width: 100%
+    padding: 26px 0
+    min-height: 70px
+  &__contacts
+    display: flex
+    justify-content: space-between
+    margin-top: 28px
+  &__text
+    margin: 0
+    color: $text-color
+    +reg
+    font-size: 15px
+    line-height: 24px
+  &__phone
+    display: block
+    text-decoration: none
+    color: $text-color
+    +bold
+    font-size: 15px
+    line-height: 24px
+@media (max-width: 1200px)
+  .offer
+    background-size: cover
+    &-block
+      padding-right: 70px
+    &__title
+      font-size: 21px
+    &__subtitle
+      font-size: 14px
+    &__input
+      width: 100%
+      margin-bottom: 10px
+      &:first-child
+        margin-right: 0
+    &__button
+      font-size: 14px
+      padding: 19px 64px
+    &__contacts
+      flex-direction: column
+      margin-top: 20px
+    &__feedback
+      margin-top: 5px
+@media (max-width: 992px)
+  .offer
+    &__title
+      font-size: 18px
+      line-height: 1.2
+      max-width: 265px
+      margin-bottom: 20px
+    &__subtitle
+      margin-bottom: 27px
+    &__button
+      padding: 19px 55px
+@media (max-width: 768px)
+  .offer
+    background: #ffffff
+    &-block
+      margin: auto
+      padding-right: 0
+      width: 70%
+    &__button
+      padding: 19px 0
+@media (max-width: 567px)
+  .offer
+    padding-top: 50px
+    padding-bottom: 56px
+    &__button
+      padding: 19px 69px
+@media (max-width: 480px)
+  .offer
+    &-block
+      width: 100%
+    &__button
+      padding: 19px 60px
