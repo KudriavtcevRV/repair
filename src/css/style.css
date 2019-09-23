@@ -27,6 +27,7 @@
 body {
   font-family: 'Museo Sans Light', sans-serif;
   font-weight: 300;
+  position: relative;
 }
 
 img {
@@ -653,5 +654,31 @@ li {
   .modal__phone {
     font-size: 16px;
   }
+}
+
+/* подключаем стили блока arrow*/
+.btn {
+  border-radius: 50%;
+  padding: 8px;
+  background-color: rgba(255, 210, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: #ffd200;
+}
+
+.btn__arrow-up {
+  border: none;
+  -webkit-box-shadow: 0 2px 5px #000000;
+          box-shadow: 0 2px 5px #000000;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+.btn__img {
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 /*# sourceMappingURL=style.css.map */
