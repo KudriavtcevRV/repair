@@ -41,9 +41,24 @@ $(document).ready(function(){
   });
 });
 
-
-
-
-
+// обработка и отправка формы черех Ajax
+$(document).ready(function(){
+  $('#offer-form').on('submit', function(event){
+    event.preventDefault();
+    $.ajax({
+      url: 'mail.php',
+      type: 'POST',
+      data: $(this).serialize(),
+      success: function(data){
+        alert('Спасибо за заявку, скоро мы вам перезвоним.');
+        $(this).find("input").val(""); //ищем данные из инпутов
+        $("#offer-form").trigger("reset"); // сбрасывается форма - в инпутах пусто
+      },
+      error: function(jqXHR, textStatus) {
+        console.log(jqXHR + ':' + textStatus);
+      }
+    });
+  });
+});
 
 

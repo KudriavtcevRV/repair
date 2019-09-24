@@ -75,11 +75,12 @@
         <div class="offer-block">
           <h2 class="section-title offer__title">Мы бесплатно разработаем дизайн-проект Вашего жилья и реализуем его!</h2>
           <p class="section-subtitle offer__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</p>
-          <form class="form offer__form" action="#">
-            <input class="input offer__input" type="text" placeholder="Ваше имя">
-            <input class="input offer__input" type="tel" placeholder="Ваш телефон">
+          <form action="#" id="offer-form" class="form offer__form" >
+            <input class="input offer__input" name="username"  type="text" placeholder="Ваше имя">
+            <input class="input offer__input" name="userphone" type="tel" placeholder="Ваш телефон">
             <button class="button offer__button">Получить бесплатный дизайн-проект</button>
           </form>
+          <div class="success"></div>
           <div class="offer__contacts">
             <p class="offer__text">Наш менеджер перезвонит Вам<br> в течение 60 секунд</p>
             <div class="offer__feedback">
@@ -101,7 +102,7 @@
       <p class="modal-dialog__subtitle">Заполните поля ниже - мы свяжемся с Вами</p>
       <form action="#" class="form modal__form">
         <input type="text" class="input modal__input" placeholder="Ваше имя">
-        <input type="tel" class="input modal__input" placeholder="Ваш телефон">
+        <input type="tel" class="input modal__input"  placeholder="Ваш телефон">
         <button class="button modal__button">Узнать стоимость</button>
       </form>
       <div class="modal__contacts">
