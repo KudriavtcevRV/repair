@@ -1,3 +1,5 @@
+// Вызов модального окна с помощью JavaScript
+
 /* var button = document.querySelector('#button');
 var modal = document.querySelector('#modal');
 var close = document.querySelector('.close');
@@ -18,6 +20,8 @@ close.addEventListener('click', function(){
   }, 5000);
 });
  */
+
+// Вызов модального окна на jQuery
 $(document).ready(function(){
   var button = $('#button');
   var modal = $('#modal');
@@ -31,6 +35,7 @@ $(document).ready(function(){
   });
 });
 
+// кнопка возвращающая на верх страницы
 $(document).ready(function(){
   let backToTop = $('.btn');
 
@@ -62,3 +67,29 @@ $(document).ready(function(){
 });
 
 
+/* Подключаем слайдер Slick */
+
+$(document).ready(function(){
+  $('.slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: ('.arrows__left'),
+    nextArrow: ('.arrows__right'),
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
