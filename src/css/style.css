@@ -525,7 +525,9 @@ li {
           justify-content: space-between;
 }
 
-.slider__img {
+.slider__item {
+  max-width: 370px;
+  text-align: center;
   margin: auto;
 }
 
@@ -734,6 +736,7 @@ li {
   position: fixed;
   bottom: 40px;
   right: 40px;
+  z-index: 99;
 }
 
 .btn__img {

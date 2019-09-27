@@ -66,8 +66,8 @@ $(document).ready(function(){
   });
 });
 
-
-/* Подключаем слайдер Slick */
+/* 
+//  Подключаем слайдер Slick 
 
 $(document).ready(function(){
   $('.slider').slick({
@@ -92,4 +92,40 @@ $(document).ready(function(){
       }
     ]
   });
+});
+ */
+
+
+//  Слайдер на Owl-carusel
+$(document).ready(function(){
+  var headerSlider = $(".owl-carousel");
+    headerSlider.owlCarousel({
+      items: 1,
+      loop: true,
+      dots: false,
+      responsiveClass:true,
+      responsive : {
+        0 : {
+          items: 1,
+          margin: 0
+        },
+        768: {
+          items: 2,
+          margin: 20
+        },
+        1200 : {
+          items: 3,
+          margin: 30
+        }
+    }
+    });
+
+  $('#headerSliderLeft').click(function() {
+    console.log('Left');
+    headerSlider.trigger('prev.owl.carousel');
+})
+  $('#headerSliderRight').click(function() {
+    console.log('Right');
+    headerSlider.trigger('next.owl.carousel');
+  })
 });
