@@ -101,8 +101,6 @@ $(document).ready(function(){
 // подключаем анимацию wow.js
   new WOW().init();
 
-
-
   var headerSlider = $(".owl-carousel");
     headerSlider.owlCarousel({
       items: 1,
