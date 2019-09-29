@@ -2,6 +2,9 @@
   position: relative
   flex-basis: 20%
   text-align: center
+  animation-name: fadeInUp
+  animation-duration: 1s
+  animation-delay: 0.6s
   &::after
     content: ''
     width: 72px
@@ -10,6 +13,9 @@
     top: -9px
     right: -36px
     background: url('../img/steps/arrow.png') no-repeat center center
+    animation-name: fadeIn
+    animation-duration: 2s
+    animation-delay: 0.5s
   &:last-child
     &::after
       display: none
@@ -36,11 +42,17 @@
       margin-bottom: 48px
       max-width: 675px
       text-align: center
+      animation-name: fadeIn
+      animation-duration: 2s
+      animation-delay: 0.5s
     &__subtitle
       display: block
       margin-bottom: 68px
       font-size: 20px
       text-align: center
+      animation-name: fadeIn
+      animation-duration: 2s
+      animation-delay: 0.5s
     &-block
       display: flex
       justify-content: space-between
