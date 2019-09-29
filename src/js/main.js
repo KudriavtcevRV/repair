@@ -96,7 +96,7 @@ $(document).ready(function(){
  */
 
 
-//  Слайдер на Owl-carusel
+//  Слайдер portfolio на Owl-carusel
 $(document).ready(function(){
   var headerSlider = $(".owl-carousel");
     headerSlider.owlCarousel({
@@ -121,11 +121,9 @@ $(document).ready(function(){
     });
 
   $('#headerSliderLeft').click(function() {
-    console.log('Left');
     headerSlider.trigger('prev.owl.carousel');
 })
   $('#headerSliderRight').click(function() {
-    console.log('Right');
     headerSlider.trigger('next.owl.carousel');
   })
 });
