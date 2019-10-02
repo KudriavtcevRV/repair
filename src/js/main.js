@@ -98,17 +98,17 @@ $(document).ready(function(){
 
 //  Слайдер portfolio на Owl-carusel
 $(document).ready(function(){
-  var step = $('.steps');
+  /* var step = $('.steps');
   var el = $('.step__image');
   var stepTop = step.offset().top;
   $(window).scroll(function(){
     var windowTop = $(this).scrollTop();
     if(windowTop > stepTop) {
-      // console.log('докрутили');
+      console.log('докрутили');
       el.addClass('step__image-animation');
       $(window).unbind('scroll');
     }
-  });
+  }); */
 
 // подключаем анимацию wow.js
   new WOW().init();

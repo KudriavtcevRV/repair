@@ -1,0 +1,41 @@
+.service
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  flex-basis: 370px
+  background-color: $bg-color
+  &s
+    &-block
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+  &__text
+    margin: 0
+    padding-top: 36px
+    padding-left: 30px
+    max-width: 320px
+    color: $text-color
+    +reg
+    font-size: 16px
+    line-height: 23px
+    margin-bottom: 32px
+  &__emphasis
+    +bold
+@media (max-width: 1200px)
+  .service
+    margin: 0 auto
+    margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0
+@media (max-width: 568px)
+  .service
+    flex-basis: 272px
+    &s
+      padding-top: 60px
+    &__text
+      padding-top: 17px
+      padding-left: 20px
+      font-size: 12px
+      line-height: 16.83px
+
+    
