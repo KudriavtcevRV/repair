@@ -98,9 +98,22 @@ $(document).ready(function(){
 
 //  Слайдер portfolio на Owl-carusel
 $(document).ready(function(){
+  var step = $('.steps');
+  var el = $('.step__image');
+  var stepTop = step.offset().top;
+  $(window).scroll(function(){
+    var windowTop = $(this).scrollTop();
+    if(windowTop > stepTop) {
+      // console.log('докрутили');
+      el.addClass('step__image-animation');
+      $(window).unbind('scroll');
+    }
+  });
+
 // подключаем анимацию wow.js
   new WOW().init();
-
+  
+// подключаем слайды owl-carusel
   var headerSlider = $(".owl-carousel");
     headerSlider.owlCarousel({
       items: 1,
@@ -130,3 +143,14 @@ $(document).ready(function(){
     headerSlider.trigger('next.owl.carousel');
   })
 });
+
+/* $(document).ready(function () {
+  // скрипт слайдера
+  let el = $('.step__image');
+  console.log(el);
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > el.offset().top - 900) {
+      el.addClass('step__image-animation');
+    }
+  });
+}); */
