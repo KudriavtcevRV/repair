@@ -8,12 +8,16 @@
   &-wrap
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
   &-block
     max-width: 300px
     text-align: center
+    margin: 0 auto
   &__image
     padding: 21px
     background-color: $bg-color
+    max-width: 270px
+    height: 360px
   &__text
     margin: 0
     margin-top: 41px
@@ -21,3 +25,30 @@
     +reg
     font-size: 18px
     line-height: 24px
+@media (max-width: 1200px)
+  .agreement
+    &__block
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
+    &__title
+      font-size: 25px
+@media (max-width: 768px)
+    .agreement
+      &-wrap
+        flex-direction: column
+      &__title
+        max-width: 400px
+@media (max-width: 567px)
+  .agreement
+    &__title
+      font-size: 18px
+      max-width: 220px
+      line-height: 1.25
+      margin-bottom: 49px
+    &__text
+      max-width: 222px
+      font-size: 14px
+      margin: 0 auto
+      margin-top: 28px
+      line-height: 1.3
