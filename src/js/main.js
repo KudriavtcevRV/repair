@@ -98,6 +98,91 @@ $(document).ready(function(){
 
 //  Слайдер portfolio на Owl-carusel
 $(document).ready(function(){
+// Маска для телефона
+$(".phone").mask("+9 9(999) 999-99-99");
+  // Валидация формы
+  $( "#modal-form" ).validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      phone: {
+        required: true
+      }
+    },
+    messages: {
+      username: {
+        required: "Укажите имя",
+        minlength: jQuery.validator.format("Внесено меньше 2 символом"),
+        maxlength: jQuery.validator.format("Внесено больше 15 символов"),
+      },
+      phone: {
+        required: "Поле телефон введён не верно"
+      }
+    }
+  });
+  $( "#offer-form" ).validate({
+    errorElement: "div",
+    errorClass: "error",
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      phone: {
+        required: true
+      }
+    },
+    messages: {
+      username: {
+        required: "Укажите имя",
+        minlength: jQuery.validator.format("Внесено меньше 2 символом"),
+        maxlength: jQuery.validator.format("Внесено больше 15 символов"),
+      },
+      phone: {
+        required: "Поле телефон введён не верно"
+      }
+    }
+  });
+  $( "#brif-form" ).validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      phone: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      username: {
+        required: "Укажите имя",
+        minlength: jQuery.validator.format("Внесено меньше 2 символом"),
+        maxlength: jQuery.validator.format("Внесено больше 15 символов"),
+      },
+      phone: {
+        required: "Поле телефон введён не верно"
+      },
+      email: {
+        required: "Поле email введено не верно",
+        email: "Введите корректный email"
+      }
+    }
+  });
+
+
   /* var step = $('.steps');
   var el = $('.step__image');
   var stepTop = step.offset().top;

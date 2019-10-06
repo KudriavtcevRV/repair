@@ -43,10 +43,44 @@ li
   border-radius: 10px
   &:focus
     border: 2px solid $main-color
+  &.invalid
+    border: 2px solid red
+  &.error
+    border: 2px solid red
 .arrows
   &__left, &__right
       cursor: pointer
+div
+  &.invalid
+    font-size: 14px
+    margin-top: -16px
+    color: red
+    +bold
+    text-align: center
+  &.error
+    font-size: 14px
+    margin-top: -30px
+    line-height: 30px
+    color: red
+    +bold
+    text-align: center
 @media (max-width: 1200px)
   .container
-    max-width: 760px
+    max-width: 900px
     width: 86%
+  .button
+    &__text
+      display: inline-block
+      max-width: 200px
+  div
+    &.error
+      margin-top: -15px
+      line-height: 15px
+@media (max-width: 768px)
+  .button
+    &__text
+      max-width: 100%
+@media (max-width: 567px)
+  .button
+    &__text
+      max-width: 200px
