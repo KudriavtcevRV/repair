@@ -110,9 +110,9 @@
           домах</h2>
 
         <div class="owl-carousel">
-          <div class="slider__item"><img class="slider__img" src="img/portfolio/slider-1.jpg" alt=""></div>
-          <div class="slider__item"><img class="slider__img" src="img/portfolio/slider-2.jpg" alt=""></div>
-          <div class="slider__item"><img class="slider__img" src="img/portfolio/slider-3.jpg" alt=""></div>
+          <div class="slider__item wow fadeInUp"  data-wow-delay="0.1s"><img class="slider__img" src="img/portfolio/slider-1.jpg" alt=""></div>
+          <div class="slider__item wow fadeInUp"  data-wow-delay="0.2s"><img class="slider__img" src="img/portfolio/slider-2.jpg" alt=""></div>
+          <div class="slider__item wow fadeInUp"  data-wow-delay="0.3s"><img class="slider__img" src="img/portfolio/slider-3.jpg" alt=""></div>
           <div class="slider__item"><img class="slider__img" src="img/portfolio/slider-1.jpg" alt=""></div>
           <div class="slider__item"><img class="slider__img" src="img/portfolio/slider-2.jpg" alt=""></div>
           <div class="slider__item"><img class="slider__img" src="img/portfolio/slider-3.jpg" alt=""></div>
@@ -204,7 +204,7 @@
         <!-- /.section-subtitle steps__subtitle -->
         <div class="steps-block">
           <div class="step">
-            <div class="step__image">
+            <div class="step__image wow fadeInUp" data-wow-delay="0.1s">
               <img src="img/steps/woman-with-headset.png" alt="woman-with-headset">
             </div>
             <!-- /.step__image -->
@@ -213,7 +213,7 @@
           </div>
           <!-- /.step -->
           <div class="step">
-            <div class="step__image">
+            <div class="step__image wow fadeInUp" data-wow-delay="0.2s">
               <img src="img/steps/wall-clock.png" alt="wall-clock">
             </div>
             <!-- /.step__image -->
@@ -222,7 +222,7 @@
           </div>
           <!-- /.step -->
           <div class="step">
-            <div class="step__image">
+            <div class="step__image wow fadeInUp" data-wow-delay="0.3s">
               <img src="img/steps/money.png" alt="money">
             </div>
             <!-- /.step__image -->
@@ -231,7 +231,7 @@
           </div>
           <!-- /.step -->
           <div class="step">
-            <div class="step__image">
+            <div class="step__image wow fadeInUp" data-wow-delay="0.4s">
               <img src="img/steps/folded-document-icon.png" alt="folded-document-icon">
             </div>
             <!-- /.step__image -->
@@ -240,7 +240,7 @@
           </div>
           <!-- /.step -->
           <div class="step">
-            <div class="step__image">
+            <div class="step__image wow fadeInUp" data-wow-delay="0.5s">
               <img src="img/steps/calendar.png" alt="calendar">
             </div>
             <!-- /.step__image -->
@@ -264,20 +264,20 @@
     <section class="section services">
       <div class="container">
         <div class="services-block">
-          <div class="service">
+          <div class="service wow fadeInUp" data-wow-delay="0.1s">
             <p class="service__text">Поможем закупить все материалы<br> по оптовым ценам у проверенных поставщиков</p>
             <div class="service__image">
               <img src="img/services/img-1.png" alt="">
             </div>
           </div>
-          <div class="service">
+          <div class="service wow fadeInUp" data-wow-delay="0.2s">
             <p class="service__text">Мы дадим Вам <span class="service__emphasis">максимальные скидки</span> у наших
               партнеров для закупки материалов оптом</p>
             <div class="service__image">
               <img src="img/services/img-2.png" alt="">
             </div>
           </div>
-          <div class="service">
+          <div class="service wow fadeInUp" data-wow-delay="0.3s">
             <p class="service__text">Все, что не сможете найти в городе - поможем заказать <span
                 class="service__emphasis">у проверенных поставщиков</span></p>
             <div class="service__image">
@@ -297,21 +297,21 @@
         <!-- /.agreement__title -->
         <div class="agreement-wrap">
           <div class="agreement-block agreement__block">
-            <div class="agreement__image">
+            <div class="agreement__image wow fadeInUp" data-wow-delay="0.1s">
               <img class="agreement__img" src="img/agreement/agreement-1.jpg" alt="договор-1">
             </div>
             <!-- /.agreement__image -->
             <p class="agreement__text">Гарантия на качество выполняемых работ</p>
           </div>
           <div class="agreement-block agreement__block">
-            <div class="agreement__image">
+            <div class="agreement__image wow fadeInUp" data-wow-delay="0.2s">
               <img class="agreement__img" src="img/agreement/agreement-2.jpg" alt="договор-2">
             </div>
             <!-- /.agreement__image -->
             <p class="agreement__text">Гарантия на фиксированные цены Виды работ и цены на них прописаны в договоре</p>
           </div>
           <div class="agreement-block agreement__block">
-            <div class="agreement__image">
+            <div class="agreement__image wow fadeInUp" data-wow-delay="0.3s"">
               <img class="agreement__img" src="img/agreement/agreement-3.jpg" alt="договор-3">
             </div>
             <!-- /.agreement__image -->
@@ -374,9 +374,8 @@
     </section>
   </main>
 <footer class="footer">
-  <div class="map" id="map">
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeaa229d9ebfc554fb509ad9f1c964a06e14f0f2b74c8eda41b454c548a2c78bd&amp;width=100%25&amp;height=640&amp;lang=ru_UA&amp;scroll=false"></script>
-  </div>
+  <div class="map" id="map"></div>
+
     <div class="section contacts-block">
       <div class="contacts">
         <h3 class="contacts__title">Приезжайте к нам в гости! Проконсультируем Вас<br> по всем вопросам ремонта</h3>
@@ -437,7 +436,9 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"></script>
   <script src="js/main.js"></script>
+  <script src="js/cards.js"></script>
 </body>
 
 </html>
