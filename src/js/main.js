@@ -1,26 +1,3 @@
-// Вызов модального окна с помощью JavaScript
-
-/* var button = document.querySelector('#button');
-var modal = document.querySelector('#modal');
-var close = document.querySelector('.close');
-
-button.addEventListener('click', function(){
-  modal.classList.add('modal_active');
-});
-close.addEventListener('click', function(){
-  // при нажатии на крестик, модальное окно закрывается
-  modal.classList.remove('modal_active');
-});
-/* button.addEventListener('click', function(){
-// при нажатии на кнопку появляется модальное окно
-  modal.classList.add('modal_active');
-// модальное окно закрывается через 5сек
-  window.setTimeout(function(){
-    modal.classList.remove('modal_active');
-  }, 5000);
-});
- */
-
 // Вызов модального окна на jQuery
 $(document).ready(function(){
   var button = $('#button');
@@ -37,7 +14,7 @@ $(document).ready(function(){
 
 // кнопка возвращающая на верх страницы
 $(document).ready(function(){
-  let backToTop = $('.btn');
+  var backToTop = $('.btn');
 
   backToTop.on('click', function(){
     $('html').animate({
@@ -46,25 +23,6 @@ $(document).ready(function(){
   });
 });
 
-// обработка и отправка формы черех Ajax
-$(document).ready(function(){
-  $('#offer-form').on('submit', function(event){
-    event.preventDefault();
-    $.ajax({
-      url: 'mail.php',
-      type: 'POST',
-      data: $(this).serialize(),
-      success: function(data){
-        alert('Спасибо за заявку, скоро мы вам перезвоним.');
-        $(this).find("input").val(""); //ищем данные из инпутов
-        $("#offer-form").trigger("reset"); // сбрасывается форма - в инпутах пусто
-      },
-      error: function(jqXHR, textStatus) {
-        console.log(jqXHR + ':' + textStatus);
-      }
-    });
-  });
-});
 
 /* 
 //  Подключаем слайдер Slick 
@@ -99,7 +57,7 @@ $(document).ready(function(){
 //  Слайдер portfolio на Owl-carusel
 $(document).ready(function(){
 // Маска для телефона
-$(".phone").mask("+9 9(999) 999-99-99");
+$(".phone").mask("+3 8(999) 999-99-99");
   // Валидация формы
   $( "#modal-form" ).validate({
     errorElement: "div",
@@ -123,6 +81,21 @@ $(".phone").mask("+9 9(999) 999-99-99");
       phone: {
         required: "Поле телефон введён не верно"
       }
+    },
+    submitHandler: function(form) {
+      event.preventDefault();
+      $.ajax({
+        url: './mail.php',
+        type: 'POST',
+        data: $("#modal-form").serialize(),
+        success: function(data){
+          alert('Спасибо за заявку, скоро мы вам перезвоним.');
+          $("#modal-form").find("input").val(""); //ищем данные из инпутов и очищаем
+        },
+        error: function(jqXHR, textStatus) {
+          console.log(jqXHR + ':' + textStatus);
+        }
+      });
     }
   });
   $( "#offer-form" ).validate({
@@ -132,7 +105,7 @@ $(".phone").mask("+9 9(999) 999-99-99");
       username: {
         required: true,
         minlength: 2,
-        maxlength: 15
+        maxlength: 16
       },
       phone: {
         required: true
@@ -142,11 +115,26 @@ $(".phone").mask("+9 9(999) 999-99-99");
       username: {
         required: "Укажите имя",
         minlength: jQuery.validator.format("Внесено меньше 2 символом"),
-        maxlength: jQuery.validator.format("Внесено больше 15 символов"),
+        maxlength: jQuery.validator.format("Внесено больше 16 символов"),
       },
       phone: {
         required: "Поле телефон введён не верно"
       }
+    },
+    submitHandler: function(form) {
+      event.preventDefault();
+      $.ajax({
+        url: './mail.php',
+        type: 'POST',
+        data: $("#offer-form").serialize(),
+        success: function(data){
+          alert('Спасибо за заявку, скоро мы вам перезвоним.');
+          $("#offer-form").find("input").val(""); //ищем данные из инпутов и очищаем
+        },
+        error: function(jqXHR, textStatus) {
+          console.log(jqXHR + ':' + textStatus);
+        }
+      });
     }
   });
   $( "#brif-form" ).validate({
@@ -179,21 +167,23 @@ $(".phone").mask("+9 9(999) 999-99-99");
         required: "Поле email введено не верно",
         email: "Введите корректный email"
       }
+    },
+    submitHandler: function(form) {
+      event.preventDefault();
+      $.ajax({
+        url: './mail.php',
+        type: 'POST',
+        data: $("#brif-form" ).serialize(),
+        success: function(data){
+          alert('Спасибо за заявку, скоро мы вам перезвоним.');
+          $("#brif-form" ).find("input").val(""); //ищем данные из инпутов и очищаем
+        },
+        error: function(jqXHR, textStatus) {
+          console.log(jqXHR + ':' + textStatus);
+        }
+      });
     }
   });
-
-
-  /* var step = $('.steps');
-  var el = $('.step__image');
-  var stepTop = step.offset().top;
-  $(window).scroll(function(){
-    var windowTop = $(this).scrollTop();
-    if(windowTop > stepTop) {
-      console.log('докрутили');
-      el.addClass('step__image-animation');
-      $(window).unbind('scroll');
-    }
-  }); */
 
 // подключаем анимацию wow.js
   new WOW().init();
@@ -223,12 +213,58 @@ $(".phone").mask("+9 9(999) 999-99-99");
 
   $('#headerSliderLeft').click(function() {
     headerSlider.trigger('prev.owl.carousel');
-})
+});
   $('#headerSliderRight').click(function() {
     headerSlider.trigger('next.owl.carousel');
-  })
+  });
 });
 
+$(document).ready(function(){
+  // Карта появляется после того как до неё докрутили
+  var brif = $('.brif');
+  var brifTop = brif.offset().top;
+    $(window).bind('scroll', function() {
+    var windowTop = $(this).scrollTop();
+    if(windowTop > brifTop) {
+      /* Функция ymaps.ready() будет вызвана, когда
+ загрузятся все компоненты API, а также когда будет готово DOM-дерево. */
+ymaps.ready(init);
+  function init() {
+  // Создание карты
+  var map = new ymaps.Map("map", {
+     // Координаты центра карты.
+    // Порядок по умолчанию: «широта, долгота».
+    // Чтобы не определять координаты центра карты вручную,
+    // воспользуйтесь инструментом Определение координат.
+    center: [55.62,37.15],
+     // Уровень масштабирования. Допустимые значения:
+    // от 0 (весь мир) до 19.
+    zoom: 13,
+    // отключили элементы управления
+    controls: ['zoomControl'],
+    // отключаем скрол карты [], drag - перемещение карты левой кнопкой мыши
+    behaviors: ['drag']
+  });
+  // указываем координаты где будет находится маркер
+  var placemark = new ymaps.Placemark([55.61,37.20],{
+    // всплывающая подсказка при наведении на метку
+    hintContent: 'Ремонт квартир',
+    // всплывающее окно после нажатия на метку
+    balloonContentHeader: 'г. Москва ул. Ленинга, д. 10, корпус 2, оф. 308',
+    balloonContentBody: 'Режим работы: с 9:00 до 18:00',
+    balloonContentFooter: 'Телефон: + 7 (495) 42-251-31'
+  },
+  {
+    preset: 'islands#blueHomeIcon',
+    iconColor: '#ffc000'
+  });
+  // Добавляем геообъект(маркер)
+  map.geoObjects.add(placemark);
+}
+      $(window).unbind('scroll');
+    }
+  });
+});
 /* $(document).ready(function () {
   // скрипт слайдера
   let el = $('.step__image');

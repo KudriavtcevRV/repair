@@ -1,6 +1,17 @@
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+  ym(55735495, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true,
+       trackHash:true
+  });
 /* Функция ymaps.ready() будет вызвана, когда
  загрузятся все компоненты API, а также когда будет готово DOM-дерево. */
-ymaps.ready(init);
+/* ymaps.ready(init);
 function init(){
   // Создание карты
   var map = new ymaps.Map("map", {
@@ -27,8 +38,10 @@ function init(){
     balloonContentFooter: 'Телефон: + 7 (495) 42-251-31'
   },
   {
-    iconLayout: 'default#image',
+    preset: 'islands#blueHomeIcon',
+    iconColor: '#ffc000'
   });
   // Добавляем геообъект(маркер)
-  map.geoObjects.add(placemark);
+  map.geoObjects.add(placemark); 
 }
+ */

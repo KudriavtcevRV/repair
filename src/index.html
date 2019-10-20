@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -27,7 +28,7 @@
             <a href="tel:+74954225131" class="navbar__phone">+7 (495) 42-251-31</a>
           </div>
           <!-- /.navbar__contacts -->
-          <button class="button navbar__button" id="button">Перезвоните мне</button>
+          <button class="button navbar__button" onclick="ym(55735495, 'reachGoal', 'button'); return true;" id="button">Перезвоните мне</button>
         </div>
         <!-- /.navbar__info -->
       </div>
@@ -40,7 +41,7 @@
     <section class="hero">
       <div class="container">
         <div class="hero-block">
-          <div class="hero-text">
+          <div class="hero-text" >
             <h1 class="hero-text__title">Внутренняя отделка помещений "под ключ"</h1>
             <p class="hero-text__subtitle">с гарантией качества, прописанной в договоре</p>
             <ul class="hero-list">
@@ -81,15 +82,21 @@
           <h2 class="section-title offer__title">Мы бесплатно разработаем дизайн-проект Вашего жилья и реализуем его!
           </h2>
           <p class="section-subtitle offer__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</p>
-          <form action="#" id="offer-form" class="form offer__form">
+
+          <form action="mail.php" method="post" id="offer-form" class="form offer__form" onsubmit="ym(55735495, 'reachGoal', 'success_form'); return true;">
             <div class="offer-form__input">
-              <span class="offer-form__error"><input class="input offer__input" name="username" type="text"
-                  placeholder="Ваше имя"></span>
-              <span class="offer-form__error"><input class="input offer__input phone" name="phone" type="tel"
-                  placeholder="Ваш телефон"></span>
+              <span class="offer-form__error">
+                <input class="input offer__input" name="username" type="text" placeholder="Ваше имя">
+              </span>
+              <span class="offer-form__error">
+                <input class="input offer__input phone" name="phone" type="tel" placeholder="Ваш телефон">
+              </span>
             </div>
-            <button class="button offer__button"><span class="button__text">Получить бесплатный дизайн-проект<span></button>
+            <button type="submit" class="button offer__button">
+              <span class="button__text">Получить бесплатный дизайн-проект</span>
+            </button>
           </form>
+
           <div class="success"></div>
           <div class="offer__contacts">
             <p class="offer__text">Наш менеджер перезвонит Вам<br> в течение 60 секунд</p>
@@ -265,21 +272,21 @@
       <div class="container">
         <div class="services-block">
           <div class="service wow fadeInUp" data-wow-delay="0.1s">
-            <p class="service__text">Поможем закупить все материалы<br> по оптовым ценам у проверенных поставщиков</p>
+            <h3 class="service__text">Поможем закупить все материалы<br> по оптовым ценам у проверенных поставщиков</h3>
             <div class="service__image">
               <img src="img/services/img-1.png" alt="">
             </div>
           </div>
           <div class="service wow fadeInUp" data-wow-delay="0.2s">
-            <p class="service__text">Мы дадим Вам <span class="service__emphasis">максимальные скидки</span> у наших
-              партнеров для закупки материалов оптом</p>
+            <h3 class="service__text">Мы дадим Вам <span class="service__emphasis">максимальные скидки</span> у наших
+              партнеров для закупки материалов оптом</h3>
             <div class="service__image">
               <img src="img/services/img-2.png" alt="">
             </div>
           </div>
           <div class="service wow fadeInUp" data-wow-delay="0.3s">
-            <p class="service__text">Все, что не сможете найти в городе - поможем заказать <span
-                class="service__emphasis">у проверенных поставщиков</span></p>
+            <h3 class="service__text">Все, что не сможете найти в городе - поможем заказать <span
+                class="service__emphasis">у проверенных поставщиков</span></h3>
             <div class="service__image">
               <img src="img/services/img-3.png" alt="">
             </div>
@@ -311,7 +318,7 @@
             <p class="agreement__text">Гарантия на фиксированные цены Виды работ и цены на них прописаны в договоре</p>
           </div>
           <div class="agreement-block agreement__block">
-            <div class="agreement__image wow fadeInUp" data-wow-delay="0.3s"">
+            <div class="agreement__image wow fadeInUp" data-wow-delay="0.3s">
               <img class="agreement__img" src="img/agreement/agreement-3.jpg" alt="договор-3">
             </div>
             <!-- /.agreement__image -->
@@ -356,11 +363,11 @@
             <div class="form brif__form">
               <h3 class="section-title form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h3>
               <span class="section-subtitle form__subtitle">Для этого заполните форму ниже</span>
-              <form action="#" id="brif-form">
+              <form action="mail.php" method="post" id="brif-form">
                 <input type="text" name="username" class="input brif__input" placeholder="Ваше имя">
                 <input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
                 <input type="email" name="email" class="input brif__input" placeholder="Ваша почта">
-                <button class="button brif__button">Рассчитать стоимость</button>
+                <button type="submit" class="button brif__button">Рассчитать стоимость</button>
                 <span class="form__description">Мы перезвоним Вам в течение 60 секунд</span>
               </form>
             </div>
@@ -398,7 +405,7 @@
             <span class="contacts-list__icon">
               <img src="img/footer/phone-call-button.png" alt="телефон">
             </span>
-            <span class="contacts-list__text">Телефон:<a class="contacts-list__link" href="tel:+ 74954225131">+ 7 (495) 42-251-31</a><span>
+            <span class="contacts-list__text">Телефон:<a class="contacts-list__link" href="tel:+74954225131">+ 7 (495) 42-251-31</a></span>
           </li>
           <!-- /.contacts-list__item -->
         </ul>
@@ -414,10 +421,10 @@
       <button class="close modal-dialog__close">&times;</button>
       <h2 class="modal-dialog__title">Узнайте точную стоимость ремонта по телефону!</h2>
       <p class="modal-dialog__subtitle">Заполните поля ниже - мы свяжемся с Вами</p>
-      <form action="#" id="modal-form" class="form modal__form">
+      <form action="mail.php" method="post" id="modal-form" class="form modal__form">
         <input type="text" name="username" class="input modal__input" placeholder="Ваше имя">
         <input type="tel" name="phone" class="input modal__input phone" placeholder="Ваш телефон">
-        <button class="button modal__button">Узнать стоимость</button>
+        <button type="submit" class="button modal__button">Узнать стоимость</button>
       </form>
       <div class="modal__contacts">
         <span class="modal__text">Или Вы можете перезвонить нам сами по телефону:</span>
@@ -436,9 +443,25 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=a3651fd2-9118-43fb-947c-5092aa734302&lang=ru_RU"></script>
   <script src="js/main.js"></script>
-  <script src="js/cards.js"></script>
+  
+    <!-- Yandex.Metrika counter -->
+<script>
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+  ym(55735495, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true,
+      trackHash:true
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/55735495" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 
 </html>
