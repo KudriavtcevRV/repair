@@ -28,7 +28,8 @@
             <a href="tel:+74954225131" class="navbar__phone">+7 (495) 42-251-31</a>
           </div>
           <!-- /.navbar__contacts -->
-          <button class="button navbar__button" onclick="ym(55735495, 'reachGoal', 'button'); return true;" id="button">Перезвоните мне</button>
+          <button class="button navbar__button" onclick="ym(55735495, 'reachGoal', 'button'); return true;"
+            id="button">Перезвоните мне</button>
         </div>
         <!-- /.navbar__info -->
       </div>
@@ -41,7 +42,7 @@
     <section class="hero">
       <div class="container">
         <div class="hero-block">
-          <div class="hero-text" >
+          <div class="hero-text">
             <h1 class="hero-text__title">Внутренняя отделка помещений "под ключ"</h1>
             <p class="hero-text__subtitle">с гарантией качества, прописанной в договоре</p>
             <ul class="hero-list">
@@ -83,7 +84,8 @@
           </h2>
           <p class="section-subtitle offer__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</p>
 
-          <form action="mail.php" method="post" id="offer-form" class="form offer__form" onsubmit="ym(55735495, 'reachGoal', 'success_form'); return true;">
+          <form action="mail.php" method="post" id="offer-form" class="form offer__form"
+            onsubmit="ym(55735495, 'reachGoal', 'success_form'); return true;">
             <div class="offer-form__input">
               <span class="offer-form__error">
                 <input class="input offer__input" name="username" type="text" placeholder="Ваше имя">
@@ -117,9 +119,12 @@
           домах</h2>
 
         <div class="owl-carousel">
-          <div class="slider__item wow fadeInUp"  data-wow-delay="0.1s"><img class="slider__img" src="img/portfolio/slider-1.jpg" alt=""></div>
-          <div class="slider__item wow fadeInUp"  data-wow-delay="0.2s"><img class="slider__img" src="img/portfolio/slider-2.jpg" alt=""></div>
-          <div class="slider__item wow fadeInUp"  data-wow-delay="0.3s"><img class="slider__img" src="img/portfolio/slider-3.jpg" alt=""></div>
+          <div class="slider__item wow fadeInUp" data-wow-delay="0.1s"><img class="slider__img"
+              src="img/portfolio/slider-1.jpg" alt=""></div>
+          <div class="slider__item wow fadeInUp" data-wow-delay="0.2s"><img class="slider__img"
+              src="img/portfolio/slider-2.jpg" alt=""></div>
+          <div class="slider__item wow fadeInUp" data-wow-delay="0.3s"><img class="slider__img"
+              src="img/portfolio/slider-3.jpg" alt=""></div>
           <div class="slider__item"><img class="slider__img" src="img/portfolio/slider-1.jpg" alt=""></div>
           <div class="slider__item"><img class="slider__img" src="img/portfolio/slider-2.jpg" alt=""></div>
           <div class="slider__item"><img class="slider__img" src="img/portfolio/slider-3.jpg" alt=""></div>
@@ -149,7 +154,7 @@
             </div>
             <div class="card__text">
               <h4 class="card__title">Ремонт ванных комнат и с/у</h4>
-              <a href="#" class="card__link">Узнать цены</a>
+              <a href="#" data-target="batch" class="card__link">Узнать цены</a>
             </div>
           </div>
           <div class="card price__card wow fadeInUp" data-wow-delay="0.2s">
@@ -158,7 +163,7 @@
             </div>
             <div class="card__text">
               <h4 class="card__title">Ремонт комнат и квартир</h4>
-              <a href="#" class="card__link">Узнать цены</a>
+              <a href="#" data-target="living" class="card__link">Узнать цены</a>
             </div>
           </div>
           <div class="card price__card wow fadeInUp" data-wow-delay="0.3s">
@@ -167,7 +172,7 @@
             </div>
             <div class="card__text">
               <h4 class="card__title">Отделка офисных помещений</h4>
-              <a href="#" class="card__link">Узнать цены</a>
+              <a href="#" data-target="office" class="card__link">Узнать цены</a>
             </div>
           </div>
           <div class="card price__card wow fadeInUp" data-wow-delay="0.4s">
@@ -176,7 +181,7 @@
             </div>
             <div class="card__text">
               <h4 class="card__title">Ремонт в новостройках</h4>
-              <a href="#" class="card__link">Узнать цены</a>
+              <a href="#" data-target="buildings" class="card__link">Узнать цены</a>
             </div>
           </div>
           <div class="card price__card wow fadeInUp" data-wow-delay="0.5s">
@@ -185,7 +190,7 @@
             </div>
             <div class="card__text">
               <h4 class="card__title">Ремонт кухонь</h4>
-              <a href="#" class="card__link">Узнать цены</a>
+              <a href="#" data-target="kitchen" class="card__link">Узнать цены</a>
             </div>
           </div>
           <div class="card price__card wow fadeInUp" data-wow-delay="0.6s">
@@ -194,7 +199,7 @@
             </div>
             <div class="card__text">
               <h4 class="card__title">Ремонт дач и коттеджей</h4>
-              <a href="#" class="card__link">Узнать цены</a>
+              <a href="#" data-target="houses" class="card__link">Узнать цены</a>
             </div>
           </div>
         </div>
@@ -380,8 +385,8 @@
       <!-- /.section brif -->
     </section>
   </main>
-<footer class="footer">
-  <div class="map" id="map"></div>
+  <footer class="footer">
+    <div class="map" id="map"></div>
 
     <div class="section contacts-block">
       <div class="contacts">
@@ -391,29 +396,32 @@
             <span class="contacts-list__icon">
               <img src="img/footer/map-placeholder.png" alt="адрес">
             </span>
-            <span class="contacts-list__text">г. Москва <br><span class="contacts-list__text-bold">ул. Ленинга, д. 10, корпус 2, оф. 308</span></span>
+            <span class="contacts-list__text">г. Москва <br><span class="contacts-list__text-bold">ул. Ленинга, д. 10,
+                корпус 2, оф. 308</span></span>
           </li>
           <!-- /.contacts-list__item -->
           <li class="contacts-list__item">
             <span class="contacts-list__icon">
               <img src="img/footer/clock-with-white-face.png" alt="время работы">
             </span>
-            <span class="contacts-list__text">Режим работы:<br><span class="contacts-list__text-bold">с 9:00 до 18:00</span></span>
+            <span class="contacts-list__text">Режим работы:<br><span class="contacts-list__text-bold">с 9:00 до
+                18:00</span></span>
           </li>
           <!-- /.contacts-list__item -->
           <li class="contacts-list__item">
             <span class="contacts-list__icon">
               <img src="img/footer/phone-call-button.png" alt="телефон">
             </span>
-            <span class="contacts-list__text">Телефон:<a class="contacts-list__link" href="tel:+74954225131">+ 7 (495) 42-251-31</a></span>
+            <span class="contacts-list__text">Телефон:<a class="contacts-list__link" href="tel:+74954225131">+ 7 (495)
+                42-251-31</a></span>
           </li>
           <!-- /.contacts-list__item -->
         </ul>
         <!-- /.contacts-list -->
+      </div>
+      <!-- /.contacts-block -->
     </div>
-    <!-- /.contacts-block -->
-  </div>
-</footer>
+  </footer>
 
 
   <div class="modal" id="modal">
@@ -434,6 +442,31 @@
     <!-- /.modal-dialog -->
   </div>
   <!-- /.modal -->
+
+  <div class="modal-price" id="modal-price">
+    <div class="modal-price-dialog">
+      <button class="close modal-dialog__close">&times;</button>
+      <div class="modal-price__column">
+        <div class="modal-price-content">
+
+        </div>
+      </div>
+      <div class="modal-price__column modal-price__column--width">
+        <h2 class="modal-dialog__title">Узнайте точную стоимость ремонта по телефону!</h2>
+        <p class="modal-dialog__subtitle">Заполните поля ниже - мы свяжемся с Вами</p>
+        <form action="mail.php" method="post" id="modal-price-form" class="form modal__form">
+          <input type="text" name="username" class="input modal__input" placeholder="Ваше имя">
+          <input type="tel" name="phone" class="input modal__input phone" placeholder="Ваш телефон">
+          <button type="submit" class="button modal__button">Узнать стоимость</button>
+        </form>
+        <div class="modal__contacts">
+          <span class="modal__text">Или Вы можете перезвонить нам сами по телефону:</span>
+          <a href="tel:+78182425131" class="modal__phone">+7 (8182) 42-51-31</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <button class="btn btn__arrow-up">
     <img class="btn__img" src="img/arrow/chevron-up.png" alt="стрелка">
   </button>
@@ -445,23 +478,31 @@
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=a3651fd2-9118-43fb-947c-5092aa734302&lang=ru_RU"></script>
   <script src="js/main.js"></script>
-  
-    <!-- Yandex.Metrika counter -->
-<script>
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
 
-  ym(55735495, "init", {
-      clickmap:true,
-      trackLinks:true,
-      accurateTrackBounce:true,
-      webvisor:true,
-      trackHash:true
-});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/55735495" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+  <!-- Yandex.Metrika counter -->
+  <script>
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
+        a)
+    })
+    (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+    ym(55735495, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true,
+      trackHash: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/55735495" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 </body>
 
 </html>

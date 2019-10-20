@@ -2,13 +2,24 @@
 $(document).ready(function(){
   var button = $('#button');
   var modal = $('#modal');
+  var modalPrice = $('#modal-price');
   var close = $('.close');
+  var cardLink = $('.card__link');
 
   button.on('click', function(){
     modal.addClass('modal_active');
   });
+  cardLink.on('click', function(e){
+    e.preventDefault();
+    modalPrice.addClass('modal-price_active');
+    var target = $(this).attr('data-target');
+    $('.modal-price-content').load(target + ".html");
+  });
   close.on('click', function(){
     modal.removeClass('modal_active');
+  });
+  close.on('click', function(){
+    modalPrice.removeClass('modal-price_active');
   });
 });
 
